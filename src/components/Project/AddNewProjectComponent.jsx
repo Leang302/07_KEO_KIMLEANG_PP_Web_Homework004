@@ -7,11 +7,13 @@ export default function AddNewProjectComponent({ addAssignment }) {
     dueDate: false,
     progress: false,
   });
-
+  const lorem =
+    "  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit consequuntur dolore distinctio ab enim pariatur hic incidunt provident, ipsa tenetur accusantium doloremque veniam beatae deserunt ratione nulla repellat blanditiis optio.";
   const [assignment, setAssignment] = useState({
     name: "",
     dueDate: "",
     progress: "",
+    description: "",
   });
 
   const handleSubmit = (e) => {
@@ -36,7 +38,10 @@ export default function AddNewProjectComponent({ addAssignment }) {
         setErrors(newErrors);
         return;
       }
-      addAssignment(assignment);
+      addAssignment({
+        ...assignment,
+        description: assignment?.description ? assignment?.description : lorem,
+      });
       toggleModal();
     }
   };
