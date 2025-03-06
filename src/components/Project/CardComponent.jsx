@@ -25,9 +25,7 @@ export default function CardComponent({ item }) {
       let weeks = Math.floor(totalDay / 7);
       return (weeks === 0 ? 1 : weeks) + (weeks === 1 ? " week" : " weeks");
     }
-    return (
-      (totalDay === 0 ? 1 : totalDay) + (totalDay === 1 ? " day" : " days")
-    );
+    return totalDay + (totalDay === 1 ? " day" : " days");
   };
   return (
     <div>
@@ -66,7 +64,7 @@ export default function CardComponent({ item }) {
 
         {/* deadline */}
         <div className="flex justify-end">
-          <p className="font-medium bg-light-gray py-1.5 px-4 rounded-lg max-w-30 text-center">
+          <p className="font-medium bg-light-gray py-1.5 px-4 rounded-lg max-w-40 text-center">
             {calculateDate()} left
           </p>
         </div>

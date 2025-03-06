@@ -5,10 +5,10 @@ import LearningMaterialsComponent from "./components/LearningMaterial/LearningMa
 import TopNavbarComponent from "./components/Navbar/TopNavbarComponent";
 import AssignmentsComponent from "./components/Project/AssignmentsComponent";
 import SidebarComponent from "./components/Sidebar/SidebarComponent";
-import { assignment } from "./data/assignments";
+
 function App() {
   //sample data
-  const [assignments, setAssignments] = useState(assignment);
+  const [assignments, setAssignments] = useState([]);
   const [filteredAssignment, setFilteredAssignment] = useState([]);
   return (
     <div className="grid grid-cols-6 bg-light-gray h-[100vh] overflow-hidden">
