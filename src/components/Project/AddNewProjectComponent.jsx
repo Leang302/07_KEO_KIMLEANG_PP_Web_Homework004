@@ -1,5 +1,5 @@
 import { Plus } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 export default function AddNewProjectComponent({ addAssignment }) {
   const [isOpen, setIsOpen] = useState(false);
   const [errors, setErrors] = useState({
