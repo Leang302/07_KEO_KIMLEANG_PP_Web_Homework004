@@ -20,7 +20,7 @@ export default function AssignmentsComponent({ assignments, setAssignments }) {
     ]);
   };
   return (
-    <div>
+    <div className="">
       <div className="flex justify-between mb-4">
         {/* assignments  */}
         <h2 className="text-xl font-semibold">Assignments</h2>

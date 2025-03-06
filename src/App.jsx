@@ -29,10 +29,10 @@ function App() {
         {/* main dashboard content */}
         <main className="grid grid-cols-5 mt-10 gap-10">
           {/* left side: dashboard,assignment */}
-          <section className="col-span-4 h-[90vh] overflow-y-auto no-scrollbar">
+          <section className="col-span-4 h-[90vh] overflow-y-auto no-scrollbar mb-6">
             <DashboardComponent />
             {/* assignment and new project */}
-            <section className=" mt-10 mb-5">
+            <section className="mt-10 mb-5">
               <AssignmentsComponent
                 assignments={
                   filteredAssignment.length > 0
@@ -42,7 +42,6 @@ function App() {
                 setAssignments={setAssignments}
               />
             </section>
-            <div className="grid grid-cols-3 gap-10">{/* assignment */}</div>
           </section>
           {/* right side: learning materials */}
           <aside className="col-span-1">
