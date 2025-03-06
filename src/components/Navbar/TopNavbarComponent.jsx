@@ -14,14 +14,10 @@ export default function TopNavbarComponent({
     setNameSearch(e.target.value);
   };
   useEffect(() => {
-    console.log(nameSearch);
-
-    console.log("Assignment before sort", assignments);
     if (nameSearch !== "") {
       let filteredAssignment = assignments?.filter((assignment) =>
         assignment.name?.toLowerCase().includes(nameSearch)
       );
-      console.log("Assignment after sort", filteredAssignment);
       setFilteredAssignment(filteredAssignment);
     } else {
       setFilteredAssignment([]);

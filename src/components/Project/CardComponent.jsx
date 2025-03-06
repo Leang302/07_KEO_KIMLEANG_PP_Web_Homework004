@@ -25,7 +25,6 @@ export default function CardComponent({ item }) {
     const dueDate = new Date(item.dueDate).setHours(0, 0, 0, 0);
     const dateDiff = new Date(dueDate - currentDate);
     const totalDay = Math.floor(dateDiff / (1000 * 60 * 60 * 24));
-    console.log(totalDay);
 
     if (totalDay >= 7) {
       let weeks = Math.floor(totalDay / 7);
@@ -47,15 +46,13 @@ export default function CardComponent({ item }) {
           </p>
           <EllipsisVertical size={20} color="#374957" />
         </div>
-
         <h5 className="capitalize mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
           {item.name}
         </h5>
         <p className="line-clamp-2 mb-3 font-normal text-justify text-gray-400 dark:text-gray-400 h-12">
           {item.description}
         </p>
-
-        {/* progress bar */}
+        z{/* progress bar */}
         <div className="w-full flex justify-between font-medium mb-1">
           <p>Progress</p>
           <p>{item.progress}%</p>
@@ -67,7 +64,6 @@ export default function CardComponent({ item }) {
             }`}
           ></div>
         </div>
-
         {/* deadline */}
         <div className="flex justify-end">
           <p className="font-medium bg-light-gray py-1.5 px-4 rounded-lg max-w-40 text-center">

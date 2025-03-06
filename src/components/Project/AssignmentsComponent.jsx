@@ -19,9 +19,6 @@ export default function AssignmentsComponent({ assignments, setAssignments }) {
       { id: assignments.length + 1, ...assignment },
     ]);
   };
-  useEffect(() => {
-    console.log(assignments);
-  }, [assignments]);
   return (
     <div>
       <div className="flex justify-between mb-4">

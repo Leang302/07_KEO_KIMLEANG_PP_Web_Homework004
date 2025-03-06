@@ -52,9 +52,6 @@ export default function AddNewProjectComponent({ addAssignment }) {
     setAssignment({ ...assignment, [name]: value });
   };
 
-  useEffect(() => {
-    console.log(assignment);
-  }, [assignment]);
   return (
     <div>
       <button
