@@ -13,6 +13,12 @@ export default function CardComponent({ item }) {
     75: "bg-custom-carrot",
     100: "bg-custom-sky-blue",
   };
+  const textColors = {
+    25: "text-custom-pink",
+    50: "text-custom-yellow",
+    75: "text-custom-carrot",
+    100: "text-custom-sky-blue",
+  };
   //calculate date
   const calculateDate = () => {
     const currentDate = new Date().setHours(0, 0, 0, 0);
@@ -32,7 +38,7 @@ export default function CardComponent({ item }) {
       <div className="max-w-sm p-6 bg-white rounded-2xl shadow-sm dark:bg-gray-800 dark:border-gray-700">
         <div className="flex justify-between mb-5">
           {/* date */}
-          <p className={`text-custom-sky-blue font-medium`}>
+          <p className={`${textColors[item?.progress]} font-medium`}>
             {new Date(item.dueDate).toLocaleDateString("en-us", {
               month: "short",
               day: "2-digit",
