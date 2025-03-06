@@ -49,10 +49,10 @@ export default function CardComponent({ item }) {
         <h5 className="capitalize mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
           {item.name}
         </h5>
-        <p className="line-clamp-2 mb-3 font-normal text-justify text-gray-400 dark:text-gray-400 h-12">
+        <p className="break-words line-clamp-2 mb-3 font-normal text-justify text-gray-400 dark:text-gray-400 min-h-12 w-full">
           {item.description}
         </p>
-        z{/* progress bar */}
+        {/* progress bar */}
         <div className="w-full flex justify-between font-medium mb-1">
           <p>Progress</p>
           <p>{item.progress}%</p>
